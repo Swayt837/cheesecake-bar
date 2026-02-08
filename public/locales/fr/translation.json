@@ -1,0 +1,142 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "commander": "Commander",
+    "evenement": "Événement",
+    "creations": "Nos Cups",
+    "pricing": "Tarifs",
+    "events": "Événementiel",
+    "about": "À Propos",
+    "quote": "Devis"
+  },
+  "hero": {
+    "tagline": "Cheesecake Cups Premium",
+    "subtitle": "Livraison de box sur la Côte d'Azur",
+    "cta_discover": "Découvrir nos créations",
+    "cta_order": "Commander maintenant",
+    "cta_reserve": "Réserver maintenant",
+    "cta_quote": "Demander un devis"
+  },
+  "products": {
+    "title": "Nos Créations",
+    "subtitle": "Des cheesecake cups artisanaux, préparés avec des ingrédients premium",
+    "order_whatsapp": "Commander via WhatsApp",
+    "from": "À partir de",
+    "box_4": "Box 4 cups",
+    "box_6": "Box 6 cups",
+    "whole_8": "Cheesecake 8 pers",
+    "whole_10": "Cheesecake 10 pers"
+  },
+  "pricing": {
+    "label": "Nos Offres",
+    "title": "Box & Cheesecakes",
+    "subtitle": "Commandez vos cups en box ou un cheesecake entier, livré chez vous",
+    "order": "Commander",
+    "delivery_note": "Livraison disponible sur Nice, Cannes, Antibes et alentours"
+  },
+  "experience": {
+    "title": "L'Expérience Bar",
+    "description": "Un show unique de dressage minute avec nos coulis signature, servi avec la technique du flair bartending.",
+    "cta": "Réserver pour votre événement"
+  },
+  "formulas": {
+    "title": "Nos Formules",
+    "dropoff": {
+      "name": "Drop-off",
+      "description": "Livraison de cups prêtes à servir",
+      "ideal_for": "Apéros, petits events"
+    },
+    "bar": {
+      "name": "Cheesecake Bar",
+      "description": "Service sur place avec bar dédié",
+      "ideal_for": "Mariages, grandes fêtes"
+    },
+    "signature": {
+      "name": "Signature Show",
+      "description": "Bar + show flair coulis + mise en scène",
+      "ideal_for": "Events premium, entreprises"
+    },
+    "cta": "Demander un devis"
+  },
+  "events_page": {
+    "title": "Votre Événement",
+    "subtitle": "Sublimez vos moments avec notre bar à cheesecake et notre show coulis au flair bartending"
+  },
+  "events": {
+    "particuliers": {
+      "title": "Événements Particuliers",
+      "subtitle": "Célébrez vos moments précieux avec une touche de gourmandise premium",
+      "occasions": {
+        "birthday": "Anniversaires",
+        "babyshower": "Baby Shower",
+        "wedding": "Mariages",
+        "evjf": "EVJF / EVG"
+      }
+    },
+    "entreprises": {
+      "title": "Événements Entreprises",
+      "subtitle": "Impressionnez vos collaborateurs et clients avec une expérience dessert unique",
+      "occasions": {
+        "seminaire": "Séminaires",
+        "afterwork": "Afterworks",
+        "lancement": "Lancements produit",
+        "inauguration": "Inaugurations"
+      },
+      "arguments": {
+        "pro": "Professionnalisme",
+        "wow": "Effet wow garanti",
+        "cle_en_main": "Clé en main"
+      }
+    }
+  },
+  "quote_form": {
+    "title": "Demander un Devis",
+    "subtitle": "Recevez votre devis personnalisé sous 24h",
+    "type": "Type d'événement",
+    "type_particulier": "Particulier",
+    "type_entreprise": "Entreprise",
+    "date": "Date de l'événement",
+    "city": "Ville",
+    "guests": "Nombre de personnes",
+    "formula": "Formule souhaitée",
+    "formula_placeholder": "Sélectionnez une formule",
+    "message": "Message (optionnel)",
+    "message_placeholder": "Décrivez votre événement...",
+    "contact": "WhatsApp ou Email",
+    "contact_placeholder": "Votre numéro ou email",
+    "submit": "Envoyer ma demande",
+    "success": "Demande envoyée ! Nous vous répondons sous 24h.",
+    "error": "Erreur lors de l'envoi. Veuillez réessayer.",
+    "rate_limit": "Veuillez patienter avant de renvoyer.",
+    "date_future": "La date doit être dans le futur."
+  },
+  "contact": {
+    "title": "Contact",
+    "whatsapp": "Nous contacter sur WhatsApp",
+    "instagram": "Suivez-nous sur Instagram",
+    "delivery_zone": "Zone de livraison",
+    "response_time": "Réponse sous 24h"
+  },
+  "about": {
+    "title": "Notre Histoire",
+    "philosophy": {
+      "premium": {
+        "title": "Premium",
+        "description": "Ingrédients de qualité supérieure sélectionnés avec soin"
+      },
+      "artisanal": {
+        "title": "Artisanal",
+        "description": "Fait main avec passion dans notre atelier"
+      },
+      "experience": {
+        "title": "Expérience",
+        "description": "Un moment unique et mémorable pour vos événements"
+      }
+    }
+  },
+  "footer": {
+    "rights": "Tous droits réservés",
+    "legal": "Mentions légales",
+    "tagline": "Cheesecake Cups Premium — Côte d'Azur"
+  }
+}

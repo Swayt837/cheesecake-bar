@@ -1,0 +1,13 @@
+{
+  "project": {
+    "name": "Cheesecake Bar",
+    "description": "Site vitrine pour un bar à cheesecakes"
+  },
+  "agents": {
+    "pm": ".claude/commands/pm.md",
+    "dev": ".claude/commands/dev.md",
+    "architect": ".claude/commands/architect.md",
+    "qa": ".claude/commands/qa.md",
+    "bmad-help": ".claude/commands/bmad-help.md"
+  }
+}

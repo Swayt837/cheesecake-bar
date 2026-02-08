@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+/* ===== THEME CONFIGURATION ===== */
+@theme {
+  /* Colors - Cheesecake Bar Palette */
+  --color-leather: #1A1414;
+  --color-leather-light: #2A2020;
+  --color-leather-dark: #151010;
+
+  --color-gold: #C9A45C;
+  --color-gold-light: #D4B574;
+  --color-gold-dark: #B8934B;
+
+  --color-ivory: #E9DEC8;
+  --color-ivory-light: #F2EBD9;
+  --color-ivory-dark: #DDD0B5;
+
+  --color-sand: #B8AA93;
+  --color-sand-light: #C5B9A5;
+  --color-sand-dark: #A99B82;
+
+  /* Fonts */
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Montserrat', sans-serif;
+
+  /* Animations */
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-fade-in: fadeIn 0.5s ease-out;
+  --animate-slide-up: slideUp 0.6s ease-out;
+}
+
+/* ===== KEYFRAMES ===== */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== BASE STYLES ===== */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-leather text-ivory font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+
+  a {
+    @apply transition-colors duration-300;
+  }
+
+  ::selection {
+    @apply bg-gold text-leather;
+  }
+}
+
+/* ===== COMPONENT CLASSES ===== */
+@layer components {
+  /* Buttons */
+  .btn-primary {
+    @apply bg-gold text-leather font-semibold px-6 py-3
+           rounded-sm transition-all duration-300
+           hover:bg-gold-light hover:shadow-lg
+           active:scale-95 cursor-pointer;
+  }
+
+  .btn-outline {
+    @apply border-2 border-gold text-gold font-semibold px-6 py-3
+           rounded-sm transition-all duration-300
+           hover:bg-gold hover:text-leather cursor-pointer;
+  }
+
+  .btn-ghost {
+    @apply text-ivory font-medium px-4 py-2
+           transition-all duration-300
+           hover:text-gold cursor-pointer;
+  }
+
+  /* Typography */
+  .heading-1 {
+    @apply font-display text-4xl md:text-6xl text-ivory
+           tracking-wide leading-tight;
+  }
+
+  .heading-2 {
+    @apply font-display text-3xl md:text-4xl text-gold
+           tracking-wide;
+  }
+
+  .heading-3 {
+    @apply font-display text-2xl md:text-3xl text-ivory
+           tracking-wide;
+  }
+
+  .body-text {
+    @apply font-body text-ivory text-base leading-relaxed;
+  }
+
+  .body-secondary {
+    @apply font-body text-sand text-sm leading-relaxed;
+  }
+
+  /* Cards */
+  .card-premium {
+    @apply bg-leather-light border border-gold/20
+           rounded-sm p-6 transition-all duration-300
+           hover:border-gold/40 hover:shadow-xl;
+  }
+
+  /* Section container */
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+  }
+
+  /* Gold accent line */
+  .gold-line {
+    @apply h-px bg-gradient-to-r from-transparent via-gold to-transparent;
+  }
+}
+
+/* ===== UTILITIES ===== */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(architect)",
+      "Skill(dev)",
+      "Skill(pm)",
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)",
+      "Bash(timeout 5 npm run dev:*)",
+      "Bash(npx tailwindcss:*)",
+      "Bash(./node_modules/.bin/tailwindcss:*)",
+      "Bash(npm ls:*)",
+      "Bash(claude --version:*)",
+      "Bash(npx tsc -b)",
+      "Bash(node -e:*)",
+      "Bash(ls:*)",
+      "WebFetch(domain:www.beluvia-barstory.com)",
+      "WebSearch",
+      "WebFetch(domain:beluviatr.com)"
+    ]
+  }
+}

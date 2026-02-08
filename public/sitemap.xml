@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://cheesecakebar.fr/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cheesecakebar.fr/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cheesecakebar.fr/" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://cheesecakebar.fr/evenements/particuliers</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cheesecakebar.fr/evenements/particuliers" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cheesecakebar.fr/evenements/particuliers" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cheesecakebar.fr/evenements/entreprises</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cheesecakebar.fr/evenements/entreprises" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cheesecakebar.fr/evenements/entreprises" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cheesecakebar.fr/a-propos</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cheesecakebar.fr/a-propos" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cheesecakebar.fr/a-propos" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>

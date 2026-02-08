@@ -1,0 +1,142 @@
+{
+  "nav": {
+    "home": "Home",
+    "commander": "Order",
+    "evenement": "Events",
+    "creations": "Our Cups",
+    "pricing": "Pricing",
+    "events": "Events",
+    "about": "About",
+    "quote": "Quote"
+  },
+  "hero": {
+    "tagline": "Cheesecake Cups Premium",
+    "subtitle": "Box delivery on the French Riviera",
+    "cta_discover": "Discover our creations",
+    "cta_order": "Order now",
+    "cta_reserve": "Book now",
+    "cta_quote": "Request a quote"
+  },
+  "products": {
+    "title": "Our Creations",
+    "subtitle": "Artisanal cheesecake cups made with premium ingredients",
+    "order_whatsapp": "Order via WhatsApp",
+    "from": "From",
+    "box_4": "Box of 4 cups",
+    "box_6": "Box of 6 cups",
+    "whole_8": "Cheesecake 8 servings",
+    "whole_10": "Cheesecake 10 servings"
+  },
+  "pricing": {
+    "label": "Our Offers",
+    "title": "Boxes & Cheesecakes",
+    "subtitle": "Order your cups in a box or a whole cheesecake, delivered to your door",
+    "order": "Order",
+    "delivery_note": "Delivery available in Nice, Cannes, Antibes and surrounding areas"
+  },
+  "experience": {
+    "title": "The Bar Experience",
+    "description": "A unique live dressing show with our signature coulis, served with flair bartending technique.",
+    "cta": "Book for your event"
+  },
+  "formulas": {
+    "title": "Our Packages",
+    "dropoff": {
+      "name": "Drop-off",
+      "description": "Ready-to-serve cups delivery",
+      "ideal_for": "Aperitifs, small events"
+    },
+    "bar": {
+      "name": "Cheesecake Bar",
+      "description": "On-site service with dedicated bar",
+      "ideal_for": "Weddings, large parties"
+    },
+    "signature": {
+      "name": "Signature Show",
+      "description": "Bar + flair coulis show + staging",
+      "ideal_for": "Premium events, corporate"
+    },
+    "cta": "Request a quote"
+  },
+  "events_page": {
+    "title": "Your Event",
+    "subtitle": "Elevate your moments with our cheesecake bar and flair bartending coulis show"
+  },
+  "events": {
+    "particuliers": {
+      "title": "Private Events",
+      "subtitle": "Celebrate your precious moments with a touch of premium indulgence",
+      "occasions": {
+        "birthday": "Birthdays",
+        "babyshower": "Baby Shower",
+        "wedding": "Weddings",
+        "evjf": "Bachelor/Bachelorette"
+      }
+    },
+    "entreprises": {
+      "title": "Corporate Events",
+      "subtitle": "Impress your colleagues and clients with a unique dessert experience",
+      "occasions": {
+        "seminaire": "Seminars",
+        "afterwork": "After-work parties",
+        "lancement": "Product launches",
+        "inauguration": "Inaugurations"
+      },
+      "arguments": {
+        "pro": "Professionalism",
+        "wow": "Guaranteed wow effect",
+        "cle_en_main": "Turnkey solution"
+      }
+    }
+  },
+  "quote_form": {
+    "title": "Request a Quote",
+    "subtitle": "Receive your personalized quote within 24h",
+    "type": "Event type",
+    "type_particulier": "Private",
+    "type_entreprise": "Corporate",
+    "date": "Event date",
+    "city": "City",
+    "guests": "Number of guests",
+    "formula": "Desired package",
+    "formula_placeholder": "Select a package",
+    "message": "Message (optional)",
+    "message_placeholder": "Describe your event...",
+    "contact": "WhatsApp or Email",
+    "contact_placeholder": "Your number or email",
+    "submit": "Send my request",
+    "success": "Request sent! We'll respond within 24h.",
+    "error": "Error sending. Please try again.",
+    "rate_limit": "Please wait before resubmitting.",
+    "date_future": "The date must be in the future."
+  },
+  "contact": {
+    "title": "Contact",
+    "whatsapp": "Contact us on WhatsApp",
+    "instagram": "Follow us on Instagram",
+    "delivery_zone": "Delivery zone",
+    "response_time": "Response within 24h"
+  },
+  "about": {
+    "title": "Our Story",
+    "philosophy": {
+      "premium": {
+        "title": "Premium",
+        "description": "Top quality ingredients carefully selected"
+      },
+      "artisanal": {
+        "title": "Artisanal",
+        "description": "Handmade with passion in our workshop"
+      },
+      "experience": {
+        "title": "Experience",
+        "description": "A unique and memorable moment for your events"
+      }
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "legal": "Legal notice",
+    "tagline": "Premium Cheesecake Cups — French Riviera"
+  }
+}

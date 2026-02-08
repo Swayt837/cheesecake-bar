@@ -1,0 +1,8 @@
+export { Hero } from './Hero'
+export { ProductSlider } from './ProductSlider'
+export { ExperienceBar } from './ExperienceBar'
+export { FormulasSection } from './FormulasSection'
+export { QuoteForm } from './QuoteForm'
+export { ContactSection } from './ContactSection'
+export { EventGallery } from './EventGallery'
+export { PhilosophySection } from './PhilosophySection'
