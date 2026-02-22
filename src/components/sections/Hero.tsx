@@ -41,7 +41,7 @@ export function Hero() {
             muted
             loop
             playsInline
-            className="absolute inset-0 min-w-full min-h-full w-auto h-auto object-cover scale-[1.15] sm:scale-100"
+            className="w-full h-full object-cover"
             poster={bgImage}
           />
         ) : bgImage ? (
