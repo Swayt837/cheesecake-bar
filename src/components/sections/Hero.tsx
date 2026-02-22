@@ -88,7 +88,7 @@ export function Hero() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button size="sm" className="w-full">
+            <Button size="sm" className="w-full !bg-gold/30 !backdrop-blur-sm hover:!bg-gold/50">
               {t('hero.cta_order')}
             </Button>
           </a>
