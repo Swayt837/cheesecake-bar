@@ -1,3 +1,4 @@
+import { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { useSanity } from '@/hooks'
@@ -11,26 +12,37 @@ const INSTAGRAM_URL = 'https://instagram.com/cheesecakebar_riviera'
 export function Hero() {
   const { t } = useTranslation()
   const { data: hero } = useSanity<HeroContent>(HERO_QUERY)
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const [isMuted, setIsMuted] = useState(true)
 
   const bgImage = hero?.backgroundImage ? urlFor(hero.backgroundImage).width(1920).format('webp').url() : undefined
   const videoUrl = hero?.videoUrl || ''
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted
+      setIsMuted(videoRef.current.muted)
+    }
+  }
 
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
-    <section className="relative h-screen flex items-center justify-start overflow-hidden -mt-20">
+    <section className="relative min-h-screen h-screen flex items-center justify-start overflow-hidden">
       {/* Fullscreen Video / Image Background */}
       <div className="absolute inset-0">
         {videoUrl ? (
           <video
+            ref={videoRef}
             src={videoUrl}
             autoPlay
             muted
             loop
             playsInline
             className="w-full h-full object-cover"
+            poster={bgImage}
           />
         ) : bgImage ? (
           <img src={bgImage} alt="" className="w-full h-full object-cover" />
@@ -86,6 +98,29 @@ export function Hero() {
           </Button>
         </motion.div>
       </div>
+
+      {/* Mute/Unmute toggle */}
+      {videoUrl && (
+        <button
+          onClick={toggleMute}
+          className="absolute bottom-6 right-6 z-10 w-10 h-10 flex items-center justify-center rounded-full border border-ivory/20 bg-leather/50 backdrop-blur-sm text-ivory/70 hover:text-ivory hover:border-gold/40 transition-colors"
+          aria-label={isMuted ? 'Activer le son' : 'Couper le son'}
+        >
+          {isMuted ? (
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+              <line x1="23" y1="9" x2="17" y2="15" />
+              <line x1="17" y1="9" x2="23" y2="15" />
+            </svg>
+          ) : (
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+            </svg>
+          )}
+        </button>
+      )}
 
       {/* Scroll indicator */}
       <motion.div

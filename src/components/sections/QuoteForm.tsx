@@ -34,8 +34,8 @@ function isFutureDate(dateStr: string): boolean {
 }
 
 const inputClass =
-  'w-full bg-leather-dark/50 border border-gold/15 text-ivory px-5 py-3.5 rounded-sm ' +
-  'placeholder:text-sand/30 focus:outline-none focus:border-gold/60 focus:shadow-[0_0_15px_rgba(201,164,92,0.08)] ' +
+  'w-full bg-leather-dark/50 border border-gold/25 text-ivory px-5 py-3.5 rounded-sm ' +
+  'placeholder:text-sand/50 focus:outline-none focus:border-gold/60 focus:shadow-[0_0_15px_rgba(201,164,92,0.08)] ' +
   'transition-all duration-300 font-body text-sm'
 
 const labelClass = 'block text-sand/80 text-xs mb-2 font-body tracking-wider uppercase'
@@ -87,19 +87,32 @@ export function QuoteForm() {
     setIsSubmitting(true)
 
     try {
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      const templateParams = {
+        type: data.type === 'particulier' ? 'Particulier' : 'Entreprise',
+        date: data.date,
+        city: data.city,
+        guests: String(data.guests),
+        formula: data.formula === 'dropoff' ? 'Drop-off' : data.formula === 'bar' ? 'Cheesecake Bar' : 'Signature Show',
+        message: data.message || '—',
+        contact: data.contact,
+      }
+
+      // Send contact notification to owner
       await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID || 'default_service',
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'default_template',
-        {
-          type: data.type,
-          date: data.date,
-          city: data.city,
-          guests: String(data.guests),
-          formula: data.formula,
-          message: data.message || '—',
-          contact: data.contact,
-        },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY || ''
+        serviceId,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_CONTACT,
+        templateParams,
+        publicKey
+      )
+
+      // Send auto-reply to client
+      await emailjs.send(
+        serviceId,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_AUTOREPLY,
+        templateParams,
+        publicKey
       )
 
       lastSubmitRef.current = now
@@ -123,7 +136,7 @@ export function QuoteForm() {
     <section id="quote" className="relative py-24 md:py-32 overflow-hidden" ref={sectionRef}>
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-leather via-leather-dark to-leather" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,164,92,0.04),transparent_70%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,164,92,0.08),transparent_70%)]" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
 
       <div className="relative z-10 max-w-2xl mx-auto px-4 sm:px-6">
@@ -140,7 +153,7 @@ export function QuoteForm() {
           <h2 className="font-display text-4xl md:text-5xl text-ivory tracking-wide">
             {t('quote_form.title')}
           </h2>
-          <p className="text-sand/60 text-sm mt-4 font-body">{t('quote_form.subtitle')}</p>
+          <p className="text-sand/75 text-sm mt-4 font-body">{t('quote_form.subtitle')}</p>
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-6" />
         </motion.div>
 
@@ -150,7 +163,7 @@ export function QuoteForm() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
           onSubmit={onFormSubmit}
-          className="space-y-6 bg-leather-light/30 border border-gold/10 rounded-sm p-8 md:p-10 backdrop-blur-sm"
+          className="space-y-6 bg-white/[0.06] border border-gold/20 rounded-sm p-8 md:p-10 backdrop-blur-sm"
           noValidate
         >
           {/* Honeypot - hidden */}
@@ -167,7 +180,7 @@ export function QuoteForm() {
                   key={val}
                   className={cn(
                     'flex-1 text-center py-3 border rounded-sm cursor-pointer transition-all duration-300 text-sm font-body tracking-wide',
-                    'border-gold/15 text-sand/60 hover:border-gold/30 hover:text-sand',
+                    'border-gold/25 text-sand/75 hover:border-gold/30 hover:text-sand',
                     '[&:has(input:checked)]:border-gold/50 [&:has(input:checked)]:text-gold [&:has(input:checked)]:bg-gold/5'
                   )}
                 >

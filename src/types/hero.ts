@@ -5,5 +5,5 @@ export interface HeroContent {
   tagline: { fr: string; en: string }
   subtitle: { fr: string; en: string }
   backgroundImage: SanityImageSource
-  videoUrl?: string
+  videoUrl?: string | null
 }

@@ -2,11 +2,20 @@ import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { Button } from '@/components/ui/Button'
+import { useSanity } from '@/hooks'
+import { EXPERIENCE_QUERY } from '@/lib/sanity/queries'
+
+interface ExperienceContent {
+  _id: string
+  videoUrl?: string | null
+}
 
 export function ExperienceBar() {
   const { t } = useTranslation()
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const { data: experience } = useSanity<ExperienceContent>(EXPERIENCE_QUERY)
+  const videoUrl = experience?.videoUrl || ''
 
   const scrollToQuote = () => {
     document.getElementById('quote')?.scrollIntoView({ behavior: 'smooth' })
@@ -33,17 +42,27 @@ export function ExperienceBar() {
             className="relative"
           >
             <div className="aspect-[4/5] rounded-sm overflow-hidden border border-gold/20 relative group">
-              {/* Placeholder - will be replaced by video */}
-              <div className="w-full h-full bg-gradient-to-br from-leather-light to-leather flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-20 h-20 border-2 border-gold/40 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:border-gold transition-colors duration-300">
-                    <svg className="w-8 h-8 text-gold/60 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
+              {videoUrl ? (
+                <video
+                  src={videoUrl}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <div className="w-full h-full bg-gradient-to-br from-leather-light to-leather flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-20 h-20 border-2 border-gold/40 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:border-gold transition-colors duration-300">
+                      <svg className="w-8 h-8 text-gold/60 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                    <p className="text-sand/60 text-sm font-body tracking-wider">FLAIR SHOW</p>
                   </div>
-                  <p className="text-sand/40 text-sm font-body tracking-wider">FLAIR SHOW</p>
                 </div>
-              </div>
+              )}
 
               {/* Gold corner accents */}
               <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-gold/40" />
@@ -69,24 +88,23 @@ export function ExperienceBar() {
 
             <div className="w-16 h-px bg-gradient-to-r from-gold to-transparent" />
 
-            <p className="text-sand text-lg md:text-xl leading-relaxed font-body">
+            <p className="text-sand text-lg md:text-xl leading-loose font-body">
               {t('experience.description')}
             </p>
 
             {/* Stats / Highlights */}
-            <div className="grid grid-cols-3 gap-6 py-6 border-t border-b border-gold/10">
+            <div className="grid grid-cols-3 gap-6 py-6 border-t border-b border-gold/20">
               <div className="text-center">
-                <span className="font-display text-3xl text-gold">15</span>
-                <span className="text-gold text-lg">min</span>
-                <p className="text-sand/60 text-xs mt-1 font-body">Show</p>
+                <span className="font-display text-2xl text-gold">Service</span>
+                <p className="text-sand/75 text-xs mt-1 font-body">personnalisé</p>
               </div>
               <div className="text-center">
                 <span className="font-display text-3xl text-gold">100%</span>
-                <p className="text-sand/60 text-xs mt-1 font-body">Wow effect</p>
+                <p className="text-sand/75 text-xs mt-1 font-body">Wow effect</p>
               </div>
               <div className="text-center">
                 <span className="font-display text-3xl text-gold">Live</span>
-                <p className="text-sand/60 text-xs mt-1 font-body">Dressage</p>
+                <p className="text-sand/75 text-xs mt-1 font-body">Dressage</p>
               </div>
             </div>
 

@@ -77,7 +77,7 @@ export function PricingSection() {
     <section id="pricing" className="relative py-24 md:py-32 overflow-hidden" ref={ref}>
       {/* Background */}
       <div className="absolute inset-0 bg-leather" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(201,164,92,0.05),transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(201,164,92,0.09),transparent_60%)]" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -94,7 +94,7 @@ export function PricingSection() {
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-ivory tracking-wide">
             {t('pricing.title')}
           </h2>
-          <p className="text-sand/50 text-sm mt-4 font-body max-w-md mx-auto">
+          <p className="text-sand/65 text-sm mt-4 font-body max-w-md mx-auto">
             {t('pricing.subtitle')}
           </p>
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-6" />
@@ -108,7 +108,7 @@ export function PricingSection() {
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.12 }}
-              className="group relative flex flex-col p-6 rounded-sm border border-gold/10 bg-leather-light/40
+              className="group relative flex flex-col p-6 rounded-sm border border-gold/20 bg-leather-light/40
                          hover:border-gold/30 hover:shadow-[0_0_40px_rgba(201,164,92,0.1)] hover:-translate-y-1
                          transition-all duration-500"
             >
@@ -130,7 +130,7 @@ export function PricingSection() {
               <div className="w-8 h-px bg-gold/20 mb-3" />
 
               {/* Description */}
-              <p className="text-sand/50 text-sm font-body leading-relaxed flex-1 mb-6">
+              <p className="text-sand/65 text-sm font-body leading-relaxed flex-1 mb-6">
                 {item.description[currentLanguage]}
               </p>
 
@@ -165,7 +165,7 @@ export function PricingSection() {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center text-sand/40 text-xs font-body mt-10 tracking-wide"
+          className="text-center text-sand/60 text-xs font-body mt-10 tracking-wide"
         >
           {t('pricing.delivery_note')}
         </motion.p>

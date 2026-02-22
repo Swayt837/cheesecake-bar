@@ -60,7 +60,7 @@
   },
   "events_page": {
     "title": "Votre Événement",
-    "subtitle": "Sublimez vos moments avec notre bar à cheesecake et notre show coulis au flair bartending"
+    "subtitle": "Sublimez vos moments avec notre bar à cheesecake et notre show de flair topping"
   },
   "events": {
     "particuliers": {
@@ -115,7 +115,10 @@
     "whatsapp": "Nous contacter sur WhatsApp",
     "instagram": "Suivez-nous sur Instagram",
     "delivery_zone": "Zone de livraison",
-    "response_time": "Réponse sous 24h"
+    "response_time": "Réponse sous 24h",
+    "cta_event": "Prêt à sublimer votre événement ?",
+    "cta_quote": "Demander un devis",
+    "cta_response": "Réponse sous 24h"
   },
   "about": {
     "title": "Notre Histoire",

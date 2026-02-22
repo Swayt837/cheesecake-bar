@@ -1,4 +1,5 @@
 import { useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { motion, useInView } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 
@@ -20,7 +21,7 @@ export function ContactSection() {
     <section id="contact" className="relative py-24 md:py-32 overflow-hidden" ref={ref}>
       {/* Background */}
       <div className="absolute inset-0 bg-leather" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(201,164,92,0.05),transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(201,164,92,0.09),transparent_60%)]" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,8 +54,8 @@ export function ContactSection() {
               href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Bonjour, je souhaiterais passer une commande.')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-4 p-5 border border-gold/10 rounded-sm
-                         bg-leather-light/30 hover:border-gold/30 hover:bg-gold/5 transition-all duration-300"
+              className="group flex items-center gap-4 p-5 border border-gold/20 rounded-sm
+                         bg-white/[0.06] hover:border-gold/30 hover:bg-gold/5 hover:shadow-[0_0_20px_rgba(201,164,92,0.06)] transition-all duration-300"
             >
               <div className="w-12 h-12 flex items-center justify-center border border-gold/20 rounded-full
                               group-hover:border-gold/50 transition-colors duration-300">
@@ -66,7 +67,7 @@ export function ContactSection() {
                 <span className="text-ivory font-body text-sm group-hover:text-gold transition-colors">
                   {t('contact.whatsapp')}
                 </span>
-                <p className="text-sand/40 text-xs mt-0.5 font-body">{t('contact.response_time')}</p>
+                <p className="text-sand/60 text-xs mt-0.5 font-body">{t('contact.response_time')}</p>
               </div>
             </a>
 
@@ -75,8 +76,8 @@ export function ContactSection() {
               href={instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-4 p-5 border border-gold/10 rounded-sm
-                         bg-leather-light/30 hover:border-gold/30 hover:bg-gold/5 transition-all duration-300"
+              className="group flex items-center gap-4 p-5 border border-gold/20 rounded-sm
+                         bg-white/[0.06] hover:border-gold/30 hover:bg-gold/5 hover:shadow-[0_0_20px_rgba(201,164,92,0.06)] transition-all duration-300"
             >
               <div className="w-12 h-12 flex items-center justify-center border border-gold/20 rounded-full
                               group-hover:border-gold/50 transition-colors duration-300">
@@ -88,9 +89,10 @@ export function ContactSection() {
                 <span className="text-ivory font-body text-sm group-hover:text-gold transition-colors">
                   {t('contact.instagram')}
                 </span>
-                <p className="text-sand/40 text-xs mt-0.5 font-body">@cheesecakebar</p>
+                <p className="text-sand/60 text-xs mt-0.5 font-body">@cheesecakebar_riviera</p>
               </div>
             </a>
+
           </motion.div>
 
           {/* Delivery zone */}
@@ -109,7 +111,7 @@ export function ContactSection() {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={isInView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ duration: 0.3, delay: 0.4 + i * 0.05 }}
-                  className="px-4 py-2 text-sm text-sand/70 border border-gold/15 rounded-sm
+                  className="px-4 py-2 text-sm text-sand/70 border border-gold/25 rounded-sm
                              hover:border-gold/30 hover:text-ivory transition-all duration-300 font-body"
                 >
                   {city}
@@ -117,19 +119,29 @@ export function ContactSection() {
               ))}
             </div>
 
-            {/* Map placeholder */}
-            <div className="mt-8 aspect-[16/9] rounded-sm border border-gold/10 overflow-hidden
-                            bg-leather-light/30 flex items-center justify-center">
-              <div className="text-center">
-                <svg className="w-10 h-10 text-gold/20 mx-auto mb-2" fill="none" stroke="currentColor" strokeWidth={1} viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                </svg>
-                <p className="text-sand/30 text-xs font-body tracking-wider">COTE D'AZUR</p>
-              </div>
-            </div>
           </motion.div>
         </div>
+
+        {/* CTA Devis - full width */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="mt-16 rounded-sm border border-gold/20 overflow-hidden
+                     bg-white/[0.06] py-12 px-8 text-center"
+        >
+          <p className="font-display text-2xl md:text-3xl text-ivory tracking-wide mb-6">
+            {t('contact.cta_event')}
+          </p>
+          <Link
+            to="/evenementiel#quote"
+            className="inline-block px-10 py-3.5 bg-gold text-leather font-body text-sm tracking-wider uppercase
+                       hover:bg-gold/90 transition-all duration-300 rounded-sm"
+          >
+            {t('contact.cta_quote')}
+          </Link>
+          <p className="text-sand/60 text-xs mt-4 font-body">{t('contact.cta_response')}</p>
+        </motion.div>
       </div>
     </section>
   )

@@ -7,6 +7,6 @@ export const sanityClient: SanityClient | null = projectId
       projectId,
       dataset: import.meta.env.VITE_SANITY_DATASET || 'production',
       apiVersion: '2024-01-01',
-      useCdn: true,
+      useCdn: false,
     })
   : null

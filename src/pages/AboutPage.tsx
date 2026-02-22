@@ -4,9 +4,19 @@ import { PhilosophySection } from '@/components/sections/PhilosophySection'
 import { Button } from '@/components/ui/Button'
 import { SEOHead } from '@/components/seo'
 import { Link } from 'react-router-dom'
+import { useSanity } from '@/hooks'
+import { ABOUT_QUERY } from '@/lib/sanity/queries'
+import { urlFor } from '@/lib/sanity/imageBuilder'
+import type { SanityImageSource } from '@sanity/image-url'
+
+interface AboutContent {
+  _id: string
+  image?: SanityImageSource
+}
 
 export default function AboutPage() {
   const { t } = useTranslation()
+  const { data: about } = useSanity<AboutContent>(ABOUT_QUERY)
 
   return (
     <>
@@ -41,7 +51,16 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="aspect-[4/5] bg-leather-light border border-gold/20 rounded-sm overflow-hidden flex items-center justify-center"
           >
-            <span className="text-sand/40 font-display text-lg">Photo fondateur</span>
+            {about?.image ? (
+              <img
+                src={urlFor(about.image).width(800).format('webp').url()}
+                alt={t('about.title')}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            ) : (
+              <span className="text-sand/60 font-display text-lg">Photo fondateur</span>
+            )}
           </motion.div>
 
           {/* Text */}
@@ -54,16 +73,13 @@ export default function AboutPage() {
           >
             <h2 className="heading-2">{t('about.title')}</h2>
             <div className="gold-line" />
-            <p className="body-text leading-relaxed">
-              Passionné par la pâtisserie et le show, j'ai créé Cheesecake Bar
-              pour réinventer le dessert événementiel sur la Côte d'Azur.
-              Chaque cheesecake cup est un moment de plaisir, servi avec la
-              technique du flair bartending pour un spectacle inoubliable.
-            </p>
-            <p className="body-text leading-relaxed">
-              Nos ingrédients sont soigneusement sélectionnés, nos recettes
-              développées avec exigence, et notre service pensé pour créer
-              des souvenirs uniques à chaque événement.
+            <p className="body-text leading-loose">{t('about.story_1')}</p>
+            <p className="body-text leading-loose">{t('about.story_2')}</p>
+            <p className="body-text leading-loose">{t('about.story_3')}</p>
+            <p className="body-text leading-loose">{t('about.story_4')}</p>
+            <p className="body-text leading-loose">{t('about.story_5')}</p>
+            <p className="body-text leading-loose text-gold/80 font-display text-lg italic">
+              {t('about.story_mission')}
             </p>
           </motion.div>
         </div>

@@ -53,14 +53,14 @@
     },
     "signature": {
       "name": "Signature Show",
-      "description": "Bar + flair coulis show + staging",
+      "description": "Bar + flair coulis show",
       "ideal_for": "Premium events, corporate"
     },
     "cta": "Request a quote"
   },
   "events_page": {
     "title": "Your Event",
-    "subtitle": "Elevate your moments with our cheesecake bar and flair bartending coulis show"
+    "subtitle": "Elevate your moments with our cheesecake bar and flair topping show"
   },
   "events": {
     "particuliers": {
@@ -115,10 +115,19 @@
     "whatsapp": "Contact us on WhatsApp",
     "instagram": "Follow us on Instagram",
     "delivery_zone": "Delivery zone",
-    "response_time": "Response within 24h"
+    "response_time": "Response within 24h",
+    "cta_event": "Ready to elevate your event?",
+    "cta_quote": "Request a quote",
+    "cta_response": "Response within 24h"
   },
   "about": {
     "title": "Our Story",
+    "story_1": "Cheesecake Bar is a simple story: Sara and Florian, two passions, and a shared desire… to create desserts that make people feel good.",
+    "story_2": "Sara spent 10 years in cooking and pastry. She has an eye that never lets anything slide: the texture must be perfect, the balance just right, and every detail must have a reason to be there. I'm Florian, I come from the world of bar and luxury events. I've learned that what you remember from a moment isn't just the taste… it's the emotion, the atmosphere, and that little touch that makes the moment unique.",
+    "story_3": "We created Cheesecake Bar to offer that every day: a premium dessert, elegant, but above all comforting. Cheesecake cups crafted with precision, generous without being heavy, indulgent without being \"too much\". Recipes that make you want to close your eyes for a second, just to savor.",
+    "story_4": "Behind every cup, there's time, trials, adjustments, sometimes nights spent starting over to get it \"just the way we want it\". Because we don't want to make \"just another dessert\". We want to make your favorite dessert. The one you have \"just once\"… then a second time.",
+    "story_5": "Cheesecake Bar is for everyone: to treat yourself, to share, to mark a moment, even a simple one. And sometimes, when the occasion calls for it, we take our world further with an event version, more staged, more spectacular — but always true to our signature: taste, elegance, and emotion.",
+    "story_mission": "At the end of the day, our mission has been the same from the start: to create a dessert that doesn't just taste good… but leaves something behind.",
     "philosophy": {
       "premium": {
         "title": "Premium",
@@ -137,6 +146,48 @@
   "footer": {
     "rights": "All rights reserved",
     "legal": "Legal notice",
+    "privacy": "Privacy policy",
+    "terms": "Terms of sale",
     "tagline": "Premium Cheesecake Cups — French Riviera"
+  },
+  "legal": {
+    "title": "Legal Notice",
+    "editor": "Website publisher",
+    "editor_text": "Cheesecake Bar — Sole proprietor\nFrench Riviera, France\nContact: via WhatsApp or Instagram",
+    "hosting": "Hosting",
+    "hosting_text": "This website is hosted by Vercel Inc.\n440 N Barranca Ave #4133\nCovina, CA 91723, USA",
+    "ip": "Intellectual property",
+    "ip_text": "All content on this website (text, images, logo, videos) is the exclusive property of Cheesecake Bar. Any reproduction, even partial, is prohibited without prior authorization.",
+    "data": "Personal data",
+    "data_text": "Data collected through the quote form (contact, event type, etc.) is used solely to respond to your request. It is neither sold nor shared with third parties. In accordance with GDPR, you have the right to access, modify and delete your data."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "intro": "Cheesecake Bar is committed to protecting the privacy of its users.",
+    "collect_title": "Data collected",
+    "collect_text": "We only collect data that you provide through the quote form: contact details (WhatsApp or email), event type, date, city, number of guests and optional message.",
+    "use_title": "Use of data",
+    "use_text": "Your data is used exclusively to process your quote request and contact you back. It is never sold, rented or shared with third parties.",
+    "retention_title": "Retention",
+    "retention_text": "Your data is kept for a maximum of 12 months after your last interaction, then deleted.",
+    "rights_title": "Your rights",
+    "rights_text": "In accordance with GDPR, you can exercise your rights of access, rectification, deletion and portability by contacting us via WhatsApp or Instagram.",
+    "cookies_title": "Cookies",
+    "cookies_text": "This site only uses technical cookies necessary for its operation (language preference). No advertising or tracking cookies are used."
+  },
+  "terms": {
+    "title": "Terms of Sale",
+    "scope_title": "Scope",
+    "scope_text": "These terms apply to all orders for boxes, cheesecakes and event services placed with Cheesecake Bar.",
+    "order_title": "Orders",
+    "order_text": "Orders are placed via WhatsApp or through the website's quote form. All orders are confirmed upon acceptance of the quote and receipt of payment.",
+    "pricing_title": "Pricing",
+    "pricing_text": "Prices are shown in euros, tax included. Cheesecake Bar reserves the right to modify its prices at any time. Applicable prices are those in effect at the time of the order.",
+    "delivery_title": "Delivery",
+    "delivery_text": "Delivery is available in Nice, Cannes, Antibes and surrounding areas. Delivery times and fees are communicated upon order confirmation.",
+    "cancel_title": "Cancellation",
+    "cancel_text": "Any cancellation must be communicated at least 48 hours before the scheduled date. In the event of late cancellation, a deposit may be retained.",
+    "liability_title": "Liability",
+    "liability_text": "Cheesecake Bar is committed to providing fresh, quality products. In case of any issue, contact us within 24 hours of delivery."
   }
 }

@@ -60,7 +60,7 @@
   },
   "events_page": {
     "title": "Your Event",
-    "subtitle": "Elevate your moments with our cheesecake bar and flair bartending coulis show"
+    "subtitle": "Elevate your moments with our cheesecake bar and flair topping show"
   },
   "events": {
     "particuliers": {
@@ -115,7 +115,10 @@
     "whatsapp": "Contact us on WhatsApp",
     "instagram": "Follow us on Instagram",
     "delivery_zone": "Delivery zone",
-    "response_time": "Response within 24h"
+    "response_time": "Response within 24h",
+    "cta_event": "Ready to elevate your event?",
+    "cta_quote": "Request a quote",
+    "cta_response": "Response within 24h"
   },
   "about": {
     "title": "Our Story",

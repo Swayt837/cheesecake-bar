@@ -16,7 +16,21 @@
       "Bash(ls:*)",
       "WebFetch(domain:www.beluvia-barstory.com)",
       "WebSearch",
-      "WebFetch(domain:beluviatr.com)"
+      "WebFetch(domain:beluviatr.com)",
+      "Bash(git commit:*)",
+      "Bash(gh repo create:*)",
+      "Bash(npx sanity dev:*)",
+      "Bash(python -c \"\nimport base64, sys\npng = base64.b64decode\\(''iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==''\\)\nwith open\\(r''C:\\\\Users\\\\Bouto\\\\cheesecake-bar\\\\public\\\\logo.png'', ''wb''\\) as f:\n    f.write\\(png\\)\nprint\\(''OK''\\)\n\")",
+      "Bash(npm run dev:*)",
+      "Bash(find:*)",
+      "Bash(while read f)",
+      "Bash(do if [ -d \"$f\" ])",
+      "Bash(then mkdir -p \"/c/Users/Bouto/OneDrive/Bureau/cheesecake-bar/$f\")",
+      "Bash(else cp \"$f\" \"/c/Users/Bouto/OneDrive/Bureau/cheesecake-bar/$f\")",
+      "Bash(fi)",
+      "Bash(done)",
+      "mcp__Sanity__query_documents",
+      "Bash(git add:*)"
     ]
   }
 }

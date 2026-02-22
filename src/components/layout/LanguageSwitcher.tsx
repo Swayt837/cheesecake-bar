@@ -16,7 +16,7 @@ export function LanguageSwitcher() {
       >
         FR
       </button>
-      <span className="text-sand/50">|</span>
+      <span className="text-sand/65">|</span>
       <button
         onClick={() => changeLanguage('en')}
         className={cn(

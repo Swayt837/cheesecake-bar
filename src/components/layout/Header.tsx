@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { cn } from '@/utils'
 import { LanguageSwitcher } from './LanguageSwitcher'
@@ -22,8 +22,13 @@ export function Header() {
     return () => { document.body.style.overflow = '' }
   }, [mobileOpen])
 
+  const navigate = useNavigate()
+
   const scrollToSection = (id: string) => {
-    if (location.pathname !== '/') return
+    if (location.pathname !== '/') {
+      navigate('/#' + id)
+      return
+    }
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   }
 
@@ -38,14 +43,21 @@ export function Header() {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
         scrolled
-          ? 'bg-leather/95 backdrop-blur-sm shadow-lg py-3'
+          ? 'bg-transparent py-3'
           : 'bg-transparent py-5'
       )}
     >
       <div className="w-full px-6 sm:px-10 lg:px-16 flex items-center justify-between">
         {/* Left - Logo */}
-        <Link to="/" className="font-display text-2xl md:text-3xl text-ivory hover:text-gold transition-colors">
-          Cheesecake Bar
+        <Link to="/" className="transition-opacity hover:opacity-80">
+          <img
+            src="/logo.png"
+            alt="Cheesecake Bar"
+            className={cn(
+              'transition-all duration-500',
+              scrolled ? 'h-24' : 'h-40'
+            )}
+          />
         </Link>
 
         {/* Right - Nav links */}

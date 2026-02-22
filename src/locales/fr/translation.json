@@ -53,14 +53,14 @@
     },
     "signature": {
       "name": "Signature Show",
-      "description": "Bar + show flair coulis + mise en scène",
+      "description": "Bar + show flair coulis",
       "ideal_for": "Events premium, entreprises"
     },
     "cta": "Demander un devis"
   },
   "events_page": {
     "title": "Votre Événement",
-    "subtitle": "Sublimez vos moments avec notre bar à cheesecake et notre show coulis au flair bartending"
+    "subtitle": "Sublimez vos moments avec notre bar à cheesecake et notre show de flair topping"
   },
   "events": {
     "particuliers": {
@@ -115,10 +115,19 @@
     "whatsapp": "Nous contacter sur WhatsApp",
     "instagram": "Suivez-nous sur Instagram",
     "delivery_zone": "Zone de livraison",
-    "response_time": "Réponse sous 24h"
+    "response_time": "Réponse sous 24h",
+    "cta_event": "Prêt à sublimer votre événement ?",
+    "cta_quote": "Demander un devis",
+    "cta_response": "Réponse sous 24h"
   },
   "about": {
     "title": "Notre Histoire",
+    "story_1": "Cheesecake Bar, c'est une histoire simple : Sara et Florian, deux passions, et une envie commune… créer des desserts qui font du bien.",
+    "story_2": "Sara a passé 10 ans en cuisine et pâtisserie. Elle a ce regard qui ne laisse rien passer : la texture doit être parfaite, l'équilibre doit être juste, et chaque détail doit avoir une raison d'être. Moi, Florian, je viens du monde du bar et de l'événementiel de luxe. J'ai appris que ce qu'on retient d'un moment, ce n'est pas seulement le goût… c'est l'émotion, l'ambiance, et cette petite touche qui rend l'instant unique.",
+    "story_3": "On a créé Cheesecake Bar pour offrir ça au quotidien : un dessert premium, élégant, mais surtout réconfortant. Des cheesecake cups travaillées avec exigence, généreuses sans être lourdes, gourmandes sans être \"trop\". Des recettes qui donnent envie de fermer les yeux une seconde, juste pour savourer.",
+    "story_4": "Derrière chaque cup, il y a du temps, des essais, des ajustements, parfois des nuits à recommencer pour que ce soit \"comme on le veut\". Parce qu'on ne veut pas faire \"un dessert de plus\". On veut faire votre dessert préféré. Celui que vous reprenez \"juste une fois\"… puis une deuxième.",
+    "story_5": "Cheesecake Bar, c'est pour tous : pour se faire plaisir, pour partager, pour marquer un moment, même simple. Et parfois, quand l'occasion s'y prête, on emmène notre univers plus loin avec une version événementielle, plus scénarisée, plus spectaculaire — mais toujours fidèle à notre signature : le goût, l'élégance, et l'émotion.",
+    "story_mission": "Au fond, notre mission est la même depuis le début : créer un dessert qui ne se contente pas d'être bon… mais qui laisse quelque chose.",
     "philosophy": {
       "premium": {
         "title": "Premium",
@@ -137,6 +146,48 @@
   "footer": {
     "rights": "Tous droits réservés",
     "legal": "Mentions légales",
+    "privacy": "Politique de confidentialité",
+    "terms": "CGV",
     "tagline": "Cheesecake Cups Premium — Côte d'Azur"
+  },
+  "legal": {
+    "title": "Mentions Légales",
+    "editor": "Éditeur du site",
+    "editor_text": "Cheesecake Bar — Entrepreneur individuel\nCôte d'Azur, France\nContact : via WhatsApp ou Instagram",
+    "hosting": "Hébergement",
+    "hosting_text": "Ce site est hébergé par Vercel Inc.\n440 N Barranca Ave #4133\nCovina, CA 91723, États-Unis",
+    "ip": "Propriété intellectuelle",
+    "ip_text": "L'ensemble du contenu de ce site (textes, images, logo, vidéos) est la propriété exclusive de Cheesecake Bar. Toute reproduction, même partielle, est interdite sans autorisation préalable.",
+    "data": "Données personnelles",
+    "data_text": "Les données collectées via le formulaire de devis (contact, type d'événement, etc.) sont utilisées uniquement pour répondre à votre demande. Elles ne sont ni vendues ni partagées avec des tiers. Conformément au RGPD, vous disposez d'un droit d'accès, de modification et de suppression de vos données."
+  },
+  "privacy": {
+    "title": "Politique de Confidentialité",
+    "intro": "Cheesecake Bar s'engage à protéger la vie privée de ses utilisateurs.",
+    "collect_title": "Données collectées",
+    "collect_text": "Nous collectons uniquement les données que vous nous fournissez via le formulaire de devis : coordonnées (WhatsApp ou email), type d'événement, date, ville, nombre de personnes et message optionnel.",
+    "use_title": "Utilisation des données",
+    "use_text": "Vos données sont utilisées exclusivement pour traiter votre demande de devis et vous recontacter. Elles ne sont jamais vendues, louées ou partagées avec des tiers.",
+    "retention_title": "Conservation",
+    "retention_text": "Vos données sont conservées pendant une durée maximale de 12 mois après votre dernière interaction, puis supprimées.",
+    "rights_title": "Vos droits",
+    "rights_text": "Conformément au RGPD, vous pouvez exercer vos droits d'accès, de rectification, de suppression et de portabilité en nous contactant via WhatsApp ou Instagram.",
+    "cookies_title": "Cookies",
+    "cookies_text": "Ce site utilise uniquement des cookies techniques nécessaires à son fonctionnement (préférence de langue). Aucun cookie publicitaire ou de suivi n'est utilisé."
+  },
+  "terms": {
+    "title": "Conditions Générales de Vente",
+    "scope_title": "Champ d'application",
+    "scope_text": "Les présentes CGV s'appliquent à toutes les commandes de box, cheesecakes et prestations événementielles passées auprès de Cheesecake Bar.",
+    "order_title": "Commandes",
+    "order_text": "Les commandes sont passées via WhatsApp ou via le formulaire de devis du site. Toute commande est confirmée après acceptation du devis et réception du paiement.",
+    "pricing_title": "Tarifs",
+    "pricing_text": "Les prix sont indiqués en euros TTC. Cheesecake Bar se réserve le droit de modifier ses tarifs à tout moment. Les tarifs applicables sont ceux en vigueur au moment de la commande.",
+    "delivery_title": "Livraison",
+    "delivery_text": "La livraison est disponible sur Nice, Cannes, Antibes et alentours. Les délais et frais de livraison sont communiqués lors de la confirmation de commande.",
+    "cancel_title": "Annulation",
+    "cancel_text": "Toute annulation doit être communiquée au moins 48h avant la date prévue. En cas d'annulation tardive, un acompte pourra être retenu.",
+    "liability_title": "Responsabilité",
+    "liability_text": "Cheesecake Bar s'engage à fournir des produits frais et de qualité. En cas de problème, contactez-nous dans les 24h suivant la livraison."
   }
 }

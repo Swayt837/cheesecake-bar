@@ -1,3 +1,5 @@
+import type { SanityImageSource } from '@sanity/image-url'
+
 export interface Formula {
   _id: string
   name: { fr: string; en: string }
@@ -5,5 +7,6 @@ export interface Formula {
   description: { fr: string; en: string }
   idealFor: { fr: string; en: string }
   features: string[]
+  image?: SanityImageSource
   order: number
 }

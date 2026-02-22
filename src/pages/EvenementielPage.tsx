@@ -33,7 +33,7 @@ export default function EvenementielPage() {
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-ivory tracking-wide">
               {t('events_page.title')}
             </h1>
-            <p className="text-sand/60 text-base mt-4 font-body max-w-xl mx-auto leading-relaxed">
+            <p className="text-sand/75 text-base mt-4 font-body max-w-xl mx-auto leading-relaxed">
               {t('events_page.subtitle')}
             </p>
             <div className="w-24 h-px bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-6" />
@@ -52,19 +52,19 @@ export default function EvenementielPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="p-8 border border-gold/10 rounded-sm bg-leather-light/30 hover:border-gold/25 transition-all duration-300"
+              className="p-8 border border-gold/20 rounded-sm bg-white/[0.06] hover:border-gold/25 transition-all duration-300"
             >
               <h3 className="font-display text-2xl text-gold mb-3">
                 {t('events.particuliers.title')}
               </h3>
-              <p className="text-sand/60 text-sm font-body mb-6">
+              <p className="text-sand/75 text-sm font-body mb-6">
                 {t('events.particuliers.subtitle')}
               </p>
               <div className="flex flex-wrap gap-2">
                 {(['birthday', 'babyshower', 'wedding', 'evjf'] as const).map((key) => (
                   <span
                     key={key}
-                    className="px-3 py-1.5 text-xs text-sand/70 border border-gold/15 rounded-sm font-body"
+                    className="px-3 py-1.5 text-xs text-sand/70 border border-gold/25 rounded-sm font-body"
                   >
                     {t(`events.particuliers.occasions.${key}`)}
                   </span>
@@ -78,19 +78,19 @@ export default function EvenementielPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.15 }}
-              className="p-8 border border-gold/10 rounded-sm bg-leather-light/30 hover:border-gold/25 transition-all duration-300"
+              className="p-8 border border-gold/20 rounded-sm bg-white/[0.06] hover:border-gold/25 transition-all duration-300"
             >
               <h3 className="font-display text-2xl text-gold mb-3">
                 {t('events.entreprises.title')}
               </h3>
-              <p className="text-sand/60 text-sm font-body mb-6">
+              <p className="text-sand/75 text-sm font-body mb-6">
                 {t('events.entreprises.subtitle')}
               </p>
               <div className="flex flex-wrap gap-2">
                 {(['seminaire', 'afterwork', 'lancement', 'inauguration'] as const).map((key) => (
                   <span
                     key={key}
-                    className="px-3 py-1.5 text-xs text-sand/70 border border-gold/15 rounded-sm font-body"
+                    className="px-3 py-1.5 text-xs text-sand/70 border border-gold/25 rounded-sm font-body"
                   >
                     {t(`events.entreprises.occasions.${key}`)}
                   </span>

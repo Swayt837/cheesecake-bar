@@ -7,6 +7,9 @@ import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 const HomePage = lazy(() => import('@/pages/HomePage'))
 const EvenementielPage = lazy(() => import('@/pages/EvenementielPage'))
 const AboutPage = lazy(() => import('@/pages/AboutPage'))
+const MentionsLegalesPage = lazy(() => import('@/pages/MentionsLegalesPage'))
+const PrivacyPage = lazy(() => import('@/pages/PrivacyPage'))
+const TermsPage = lazy(() => import('@/pages/TermsPage'))
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/evenementiel" element={<EvenementielPage />} />
             <Route path="/a-propos" element={<AboutPage />} />
+            <Route path="/mentions-legales" element={<MentionsLegalesPage />} />
+            <Route path="/confidentialite" element={<PrivacyPage />} />
+            <Route path="/cgv" element={<TermsPage />} />
           </Routes>
         </Suspense>
       </main>

@@ -3,9 +3,9 @@
 /* ===== THEME CONFIGURATION ===== */
 @theme {
   /* Colors - Cheesecake Bar Palette */
-  --color-leather: #1A1414;
-  --color-leather-light: #2A2020;
-  --color-leather-dark: #151010;
+  --color-leather: #1F1919;
+  --color-leather-light: #302626;
+  --color-leather-dark: #181212;
 
   --color-gold: #C9A45C;
   --color-gold-light: #D4B574;
@@ -111,14 +111,14 @@
   }
 
   .body-secondary {
-    @apply font-body text-sand text-sm leading-relaxed;
+    @apply font-body text-sand text-sm leading-loose;
   }
 
   /* Cards */
   .card-premium {
-    @apply bg-leather-light border border-gold/20
+    @apply bg-white/[0.06] border border-gold/25
            rounded-sm p-6 transition-all duration-300
-           hover:border-gold/40 hover:shadow-xl;
+           hover:border-gold/40 hover:shadow-[0_0_20px_rgba(201,164,92,0.08)];
   }
 
   /* Section container */
