@@ -30,7 +30,7 @@ export function Hero() {
   }
 
   return (
-    <section className="relative min-h-screen h-screen flex items-center justify-start overflow-hidden">
+    <section className="relative min-h-dvh h-dvh flex items-center justify-start overflow-hidden">
       {/* Fullscreen Video / Image Background */}
       <div className="absolute inset-0">
         {videoUrl ? (
